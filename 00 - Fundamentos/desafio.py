@@ -42,13 +42,14 @@ while True:
             print("Operação falhou! O valor excedeu o limite por saque.")
         elif limite_diario_excedido:
             print("Operação falhou! Você passou do limite de saques por dia")
-        else:
-            valor>0
+        elif valor>0:
             saldo-=valor
             numero_saques+=1
             extrato+= (f"\nSaque do valor R$ {valor:.2f}")
             print("Saque efetuado com sucesso!!")     
-
+        else:
+            print("Operação falhou!Número inválido!!")
+            
     elif opcao == "e":
         print("\n================ EXTRATO ================")
         print("Não foram realizadas movimentações." if not extrato else extrato)
